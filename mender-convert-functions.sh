@@ -623,13 +623,14 @@ set_fstab() {
 	devpts               /dev/pts             devpts     mode=0620,gid=5       0  0
 	tmpfs                /run                 tmpfs      mode=0755,nodev,nosuid,strictatime 0  0
 	tmpfs                /var/volatile        tmpfs      defaults              0  0
+	tmpfs                /var/log             tmpfs      defaults,noatime      0  0
 
 	# uncomment this if your device has a SD/MMC/Transflash slot
 	#/dev/mmcblk0p1       /media/card          auto       defaults,sync,noauto  0  0
 
 	# Where the U-Boot environment resides; for devices with SD card support ONLY!
 	/dev/mmcblk0p1   $mountpoint          auto       defaults,sync    0  0
-	/dev/mmcblk0p4   /data                auto       defaults         0  0
+	/dev/mmcblk0p4   /data                auto       defaults,noatime 0  0
 	EOF"
 
   log "\tDone."
