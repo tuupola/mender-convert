@@ -623,7 +623,6 @@ set_fstab() {
 	devpts               /dev/pts             devpts     mode=0620,gid=5       0  0
 	tmpfs                /run                 tmpfs      mode=0755,nodev,nosuid,strictatime 0  0
 	tmpfs                /var/volatile        tmpfs      defaults              0  0
-	tmpfs                /var/log             tmpfs      defaults,noatime      0  0
 
 	# uncomment this if your device has a SD/MMC/Transflash slot
 	#/dev/mmcblk0p1       /media/card          auto       defaults,sync,noauto  0  0
